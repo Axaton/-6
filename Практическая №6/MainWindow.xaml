@@ -1,0 +1,42 @@
+﻿<Window x:Class="Практическая__6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая__6"
+        mc:Ignorable="d"
+        Title="Практическая №6" Height="276.667" Width="430.667" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Увеличить на 1" Click="IncreaseBy1_Click"/>
+                <MenuItem Header="Сумма триады с числом" Click="GetSum_Click"/>
+                <Separator/>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem Header="Информация о разработчике" Click="DeveloperInfo_Click"/>
+                <MenuItem Header="Информация о задании" Click="TaskInfo_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <GroupBox Header="Триада" HorizontalAlignment="Left" Height="162" Margin="10,31,0,0" VerticalAlignment="Top" Width="175">
+            <Grid HorizontalAlignment="Left" Height="129" Margin="10,10,0,0" VerticalAlignment="Top" Width="149">
+                <TextBox x:Name="firstTriad1" HorizontalAlignment="Left" Height="23" Margin="19,17,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="secondTriad1" HorizontalAlignment="Left" Height="23" Margin="19,54,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="thirdTriad1" HorizontalAlignment="Left" Height="23" Margin="19,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+            </Grid>
+        </GroupBox>
+
+        <Button Content="Увеличить на 1" HorizontalAlignment="Left" Margin="32,210,0,0" VerticalAlignment="Top" Width="137" Height="26" Click="IncreaseBy1_Click"/>
+        <GroupBox Header="Полная сумма триады с числом" HorizontalAlignment="Left" Height="162" Margin="206,31,0,0" VerticalAlignment="Top" Width="207">
+            <Grid HorizontalAlignment="Left" Height="140" Margin="10,0,0,-1" VerticalAlignment="Top" Width="182">
+                <Label Content="Число:" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="52"/>
+                <TextBox x:Name="inputValue" HorizontalAlignment="Left" Height="23" Margin="67,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+                <Label Content="Сумма:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="sum" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="67,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+                <Button Content="Вычислить" HorizontalAlignment="Left" Margin="67,107,0,0" VerticalAlignment="Top" Width="105" Height="23" Click="GetSum_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
